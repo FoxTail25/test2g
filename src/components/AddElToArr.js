@@ -4,7 +4,7 @@ let arr = [1, 2, 3, 4, 5];
 
 export default function AddElToArr() {
 
-    const [notes, setNotes] = useState([1, 2, 3, 4, 5]);
+    const [notes, setNotes] = useState(arr);
     const [inp, setInp] = useState()
     const [data, setdata] = useState()
 
