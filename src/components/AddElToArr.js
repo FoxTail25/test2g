@@ -1,3 +1,5 @@
+// Реактивные операции над массивами в React
+
 import { useState } from "react";
 
 let arr = [1, 2, 3, 4, 5];
