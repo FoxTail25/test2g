@@ -1,17 +1,7 @@
-import React from "react";
+import AddElToArr from "./components/AddElToArr";
 
-let arr = [1, 2, 3, 4, 5];
-
-function App() {
-	const [notes, setNotes] = useState(arr);
-	
-	const result = notes.map((note, index) => {
-		return <li key={index}>{note}</li>;
-	});
-	
-	return <div>
-		<ul>
-			{result}
-		</ul>
-	</div>;
+export default function App() {
+	return <>
+	<AddElToArr/>
+	</>
 }
