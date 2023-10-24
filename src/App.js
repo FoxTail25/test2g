@@ -1,14 +1,14 @@
 // import AddElToArr from "./components/AddElToArr";
+// import ObjAddToArr from "./components/ObjAddToArr";
 
-import ObjAddToArr from "./components/ObjAddToArr";
+import ReactWievData from "./components/ReactWievData";
 
-// test
 
-// test2
 
 export default function App() {
 	return <>
 	{/* <AddElToArr/> */}
-	<ObjAddToArr/>
+	{/* <ObjAddToArr/> */}
+	<ReactWievData/>
 	</>
 }
