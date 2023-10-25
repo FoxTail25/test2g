@@ -1,9 +1,9 @@
-import Employee from "./components/employee/Employee";
+import Products from "./components/product/Products";
 
 
 export default function App() {
 
 	return <>
-	<Employee/>
+	<Products/>
 	</>
 }
