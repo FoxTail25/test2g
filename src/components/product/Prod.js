@@ -1,10 +1,50 @@
 
-export default function Prod({id, name, cost, inCart, addToCart }) {
+export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggleMode }) {
+
+    let ml = {
+        marginLeft: "10px"
+    }
+    let ft = {
+        width: "fit-Content",
+    }
 
     return <li>
-        <p>Имя: <i>{name}</i></p>
-        <span style={{marginLeft: "10px"}}>Цена: <i>{cost}</i></span>
-        <span style={{marginLeft: "10px"}}><b>{inCart ? "in cart":"not in cart"}</b></span>
-        <button onClick={()=>addToCart(id)}>В корзину</button>
+        <p>
+            {
+                isEdit
+                    ? (
+                        <>
+                            <p>
+
+                                "Имя:" <input style={ft} value={name} />
+                            </p>
+                            <p>
+                                    "Цена:" <input value={cost} />
+                            </p>
+                        </>
+                    )
+
+                    : (
+                        <>
+
+                            "Имя:" <i>{name}</i>
+
+                            <span style={ml}>
+                                "Цена:" <i>{cost}</i>
+                            </span>
+                        </>
+                    )
+
+            }
+            <button style={ml} onClick={() => toggleMode(id)}>
+                edit
+            </button>
+        </p>
+
+        <span style={ml}>
+            <b>{inCart ? "in cart" : "not in cart"}</b>
+        </span>
+        <button style={ml} onClick={() => addToCart(id)}>В корзину</button>
+
     </li>
 }
