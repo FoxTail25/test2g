@@ -1,5 +1,5 @@
 
-export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggleMode }) {
+export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggleMode, editProduct }) {
 
     let ml = {
         marginLeft: "10px"
@@ -19,7 +19,7 @@ export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggle
                                 "Имя:" <input style={ft} value={name} />
                             </p>
                             <p>
-                                    "Цена:" <input value={cost} />
+                                "Цена:" <input value={cost} />
                             </p>
                         </>
                     )
@@ -37,7 +37,11 @@ export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggle
 
             }
             <button style={ml} onClick={() => toggleMode(id)}>
-                edit
+                {
+                    isEdit
+                        ? "save"
+                        : "edit"
+                }
             </button>
         </p>
 

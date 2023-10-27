@@ -38,22 +38,37 @@ function Products() {
 
     }
 
+    function editProduct(id, rule, value) {
+        setProds(prods.map(el => {
+            if(el.id === id) {
+                el[rule] = value
+                return el
+            } else {
+                return el
+            }
+        }))
+    }
 
-    return <ul>
-        {
-            prods.map(el =>
-                <Prod
-                    key={el.id}
-                    id={el.id}
-                    name={el.name}
-                    cost={el.cost}
-                    inCart={el.inCart}
-                    addToCart={addToCart}
-                    isEdit={el.isEdit}
-                    toggleMode={toggleMode}
-                />)
-        }
-    </ul>
+
+    return <>
+        <ul>
+
+            {
+                prods.map(el =>
+                    <Prod
+                        key={el.id}
+                        id={el.id}
+                        name={el.name}
+                        cost={el.cost}
+                        inCart={el.inCart}
+                        addToCart={addToCart}
+                        isEdit={el.isEdit}
+                        toggleMode={toggleMode}
+                        editProduct={editProduct}
+                    />)
+            }
+        </ul>
+    </>
 }
 
 export default Products;
