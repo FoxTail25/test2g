@@ -38,10 +38,10 @@ function Products() {
 
     }
 
-    function editProduct(id, rule, value) {
+    function editProduct(id, fild, event) {
         setProds(prods.map(el => {
-            if(el.id === id) {
-                el[rule] = value
+            if (el.id === id) {
+                el[fild] = event.target.value
                 return el
             } else {
                 return el
@@ -50,7 +50,11 @@ function Products() {
     }
 
 
+
+
     return <>
+
+
         <ul>
 
             {

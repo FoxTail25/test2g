@@ -7,15 +7,15 @@ import User from "./User";
 const initUsers = [
 	{
 		id: nanoid(), name: 'user1', surname: 'surn1',
-		age: 30, ban: true
+		age: 30, ban: true, isEdit:false
 	},
 	{
 		id: nanoid(), name: 'user2', surname: 'surn2',
-		age: 31, ban: true
+		age: 31, ban: true, isEdit:false
 	},
 	{
 		id: nanoid(), name: 'user3', surname: 'surn3',
-		age: 32, ban: true
+		age: 32, ban: true, isEdit:false
 	},
 ];
 
@@ -34,6 +34,28 @@ const Users = () => {
 		}))
 	}
 
+	function editToggle(id) {
+		setUsersArr(usersArr.map(user => {
+			if (user.id === id) {
+				user.isEdit = !user.isEdit;
+				return user
+			} else {
+				return user
+			}
+		}))
+	}
+
+	function editUser(id, fild, event) {
+		setUsersArr(usersArr.map(user => {
+			if (user.id === id) {
+				user[fild] = event.target.value;
+				return user
+			} else {
+				return user
+			}
+		}))
+	}
+
 	return <div style={{ margin: "0 auto", width: "fit-content" }}>
 		{usersArr.map(user =>
 			<User
@@ -43,6 +65,9 @@ const Users = () => {
 				surname={user.surname}
 				ban={user.ban}
 				addToBan={addToBan}
+				isEdit={user.isEdit}
+				editToggle={editToggle}
+				editUser={editUser}
 			/>
 		)}
 	</div>

@@ -2,24 +2,35 @@
 export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggleMode, editProduct }) {
 
     let ml = {
-        marginLeft: "10px"
+        marginLeft: "10px",
+        transition: '.3s'
     }
-    let ft = {
-        width: "fit-Content",
+
+
+
+    let cr = {...ml,
+        background: "red",
+        padding: "0 10px",
+        borderRadius: "8px"
+    }
+    let gn = {...ml,
+        background: "green",
+        padding: "0 10px",
+        borderRadius: "8px"
     }
 
     return <li>
-        <p>
+        <p style={{transition: "1s"}}>
             {
                 isEdit
                     ? (
                         <>
                             <p>
 
-                                "Имя:" <input style={ft} value={name} />
+                                "Имя:" <input value={name} onChange={(event) => editProduct(id, 'name', event)}/>
                             </p>
                             <p>
-                                "Цена:" <input value={cost} />
+                                "Цена:" <input type="number" value={cost} onChange={(event) => editProduct(id, 'cost', event)}/>
                             </p>
                         </>
                     )
@@ -45,7 +56,7 @@ export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggle
             </button>
         </p>
 
-        <span style={ml}>
+        <span style= {inCart ? gn:cr}>
             <b>{inCart ? "in cart" : "not in cart"}</b>
         </span>
         <button style={ml} onClick={() => addToCart(id)}>В корзину</button>
