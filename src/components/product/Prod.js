@@ -1,26 +1,25 @@
 import ProductFild from "./ProductFild"
 
+let ml = {
+    marginLeft: "10px",
+    transition: '.3s'
+}
+
+let cr = {
+    ...ml,
+    background: "red",
+    padding: "0 10px",
+    borderRadius: "8px"
+}
+let gn = {
+    ...ml,
+    background: "green",
+    padding: "0 10px",
+    borderRadius: "8px"
+}
+
 export default function Prod({ id, name, cost, inCart, addToCart, isEdit, toggleMode, editProduct }) {
 
-    let ml = {
-        marginLeft: "10px",
-        transition: '.3s'
-    }
-
-
-
-    let cr = {
-        ...ml,
-        background: "red",
-        padding: "0 10px",
-        borderRadius: "8px"
-    }
-    let gn = {
-        ...ml,
-        background: "green",
-        padding: "0 10px",
-        borderRadius: "8px"
-    }
 
     return <li>
         <p style={{ transition: "1s" }}>

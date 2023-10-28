@@ -1,3 +1,5 @@
+import UserField from "./userField"
+
 export default function User({ id, name, surname, ban, addToBan, isEdit, editToggle, editUser }) {
 
     const ml = { marginLeft: "10px" }
@@ -6,18 +8,34 @@ export default function User({ id, name, surname, ban, addToBan, isEdit, editTog
         <p style={{ marginBottom: "5px" }}>
             id: <span>{id} </span>
         </p>
+        {/* "Имя:"
         {
             isEdit
-                ? <>
-                    Имя: <input value={name} onChange={(ev) => editUser(id, 'name', ev)} />
-                    <br />
-                    Фамилия: <input value={surname} onChange={(ev) => editUser(id, 'surname', ev)} />
-                </>
-                : <>
-                    Имя: <span>{name} </span>
-                    Фамилия: <span>{surname}</span>
-                </>
+                ? <input value={name} onChange={(ev) => editUser(id, 'name', ev)} />
+                : <span>{name} </span>
         }
+        Фамилия:
+        {
+            isEdit
+                ? <input value={surname} onChange={(ev) => editUser(id, 'surname', ev)} />
+                : <span>{surname}</span>
+        } */}
+        "Имя:"
+        <UserField
+            id={id}
+            name={name}
+            field="name"
+            isEdit={isEdit}
+            editUser={editUser}
+        />
+        "Фамилия"
+        <UserField
+            id={id}
+            name={surname}
+            field="surname"
+            isEdit={isEdit}
+            editUser={editUser}
+        />
         <button style={ml} onClick={() => editToggle(id)}>
             {isEdit
                 ? "save"
@@ -36,5 +54,5 @@ export default function User({ id, name, surname, ban, addToBan, isEdit, editTog
             </span>
             <button onClick={() => addToBan(id)} style={ml}>ban</button>
         </p>
-    </div>
+    </div >
 }
