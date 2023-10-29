@@ -1,7 +1,5 @@
-// import Products from "./components/product/Products";
-// import Users from "./components/user/Users";
 
-import Products2 from "./components/product2/product2";
+import Temperat from "./components/temperat/Temperat";
 
 
 export default function App() {
@@ -10,5 +8,6 @@ export default function App() {
 	{/* <Users/> */}
 	{/* <Products/> */}
 	{/* <Products2/> */}
+	<Temperat/>
 	</>
 }
