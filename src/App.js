@@ -1,5 +1,5 @@
 
-import Temperat from "./components/temperat/Temperat";
+import ConvertCellToFar from "./components/convert/Convert";
 
 
 export default function App() {
@@ -8,6 +8,6 @@ export default function App() {
 	{/* <Users/> */}
 	{/* <Products/> */}
 	{/* <Products2/> */}
-	<Temperat/>
+	<ConvertCellToFar/>
 	</>
 }
