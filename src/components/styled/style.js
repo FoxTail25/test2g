@@ -20,10 +20,14 @@ const class4 = {
 	fontWeight: 'bold',
 	color: 'white',
 };
+const class5 = {
+	margin: '2px'
+};
 
 export const styles = {
     class1: class1,
     class2: class2,
     class3: class3,
-    class4: class4
+    class4: class4,
+    class5: class5,
 }
