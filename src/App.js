@@ -1,4 +1,4 @@
-import Styled1 from "./components/styled/styled1";
+import { StyleComp } from "./components/styled/styledComp/styleComp";
 
 
 
@@ -7,7 +7,6 @@ export default function App() {
 
 
 	return (
-
-		<Styled1/>
+		<StyleComp/>
 	);
 }

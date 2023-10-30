@@ -3,6 +3,7 @@ const class1 = {
 	border: '2px solid brown',
 	padding: '10px',
 	textAlign: 'center',
+	margin: '0 auto'
 };
 
 const class2 = {
