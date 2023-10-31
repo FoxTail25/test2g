@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
-import { MyContext } from '../../../MyContext'
+import { MyContext } from '../../../../MyContext'
 
 export const Grandson = () => {
 
-    const age = useContext(MyContext)
+    const {age, setAge} = useContext(MyContext)
 
 
     return (
         <div>
             Grandson
-            {age}
+            <input value={age} onChange={(e)=> setAge(e.target.value)}/>
+            {age / 2}
         </div>
     )
 }
