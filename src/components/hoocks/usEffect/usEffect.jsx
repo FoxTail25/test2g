@@ -7,16 +7,13 @@ let container = {
   margin: "0 auto", width:"fit-content", textAlign:"center"
 }
 
+export const Helen = () => {
 
-export const UsEffect = () => {
-
-    
 console.log(2)
+
 useEffect(()=>{
-
-  document.querySelector('title').innerHTML = 'bomb'
+  document.querySelector('title').innerHTML = 'Helen useEffect is bomb!!!'
   document.querySelector('.Helen').innerHTML = '<i style="text-decoration: underline;">Елена</i>, useEffect - это <b style="color:red">БОМБИЧНАЯ</b> хрень!'
-
   console.log(3)
 },[])
 
