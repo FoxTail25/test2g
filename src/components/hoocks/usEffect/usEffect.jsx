@@ -10,7 +10,11 @@ export const UsEffect = () => {
 console.log(2)
 
 useEffect(()=>{
-	console.log(3)
+  let domChild = [...document.head.children]
+	console.log(domChild)
+  let title = domChild.filter(elem => elem.nodeName==='TITLE')
+  title[0].innerHTML = 'useEffect'
+  console.log(title)
 },[])
 
 
