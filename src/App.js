@@ -1,18 +1,13 @@
-
-// import { Task2 } from "./components/styled/styledcomp/Task2";
-// import { Task1 } from "./components/styled/styledcomp/task1";
+// import { UsEffect } from "./components/hoocks/usEffect/usEffect";
+// import { StyleComp } from "./components/styled/styledComp/styleComp";
 
 import { CssMod } from "./components/styled/cssModule/CssMod";
 
 
-
-
 export default function App() {
 
-	return (
-		// 	// <Task2/>
-		<div>
-			<CssMod />
-		</div>
-	);
+
+	// return (
+	// 	<UsEffect/>
+	// );
 }
