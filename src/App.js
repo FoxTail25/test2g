@@ -1,16 +1,20 @@
-// import { Name } from "./components/hoocks/usEffect/Name";
-import { Color } from "./components/hoocks/usEffect/color";
-// import { Helen, UsEffect } from "./components/hoocks/usEffect/usEffect";
-// import { StyleComp } from "./components/styled/styledComp/styleComp";
-
-// import { CssMod } from "./components/styled/cssModule/CssMod";
+import { useState } from 'react';
+import { MyContext } from './MyContext.js';
+import { Parent } from './components/context/task2/Parent.jsx';
+// import { BigBox } from './components/context/task1/BigBox.js';
+import './style.css'
 
 
 
 export default function App() {
 
+	const [age, setAge] = useState(42)
 
 	return (
-		<Color/>
+		<MyContext.Provider value={age}>
+
+			<Parent/>
+
+		</MyContext.Provider>
 	);
 }
