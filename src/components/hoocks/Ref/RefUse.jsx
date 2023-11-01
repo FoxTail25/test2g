@@ -5,7 +5,7 @@ export const RefUse = () => {
 
     const [state, setState] = useState('state Text')
 
-    // console.log('render')
+    console.log('render')
     
     const ref = useRef('ref Text')
     
@@ -16,7 +16,7 @@ export const RefUse = () => {
     function changeRef() {
         
         ref.current = ref.current + '!'
-        console.log(ref.current)
+        // console.log(ref.current)
     }
 
     return (

@@ -14,12 +14,13 @@ export const RefUse2 = () => {
         p.current.innerHTML = '<b>red</b>blabla'
         console.log(i)
         console.log(i.current)
+        console.log(p.current)
     }
 
   return (
     <div>
         <input ref={i}/>
-        <p ref={p}></p>
+        <p ref={p}>erty</p>
         <button onClick={handleClick}>focus</button>
     </div>
   )
