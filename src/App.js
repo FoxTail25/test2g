@@ -1,4 +1,5 @@
 
+import { CallBack } from './components/hoocks/CallBack/CallBack';
 import { MemoApi } from './components/hoocks/memoApi/MemoApi';
 import { Elena } from './components/hoocks/usEffect/Elena';
 // import { RefUse2 } from './components/hoocks/Ref/RefUse2';
@@ -11,7 +12,7 @@ export default function App() {
 
 	return (
 		<>
-			<Elena />
+			<CallBack />
 		</>
 	);
 }
