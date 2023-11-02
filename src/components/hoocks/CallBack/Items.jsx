@@ -1,7 +1,7 @@
 import React from 'react';
 import {memo} from 'react';
 
-export const memo(Items = ({items, addItem}) => {
+export const Items = memo(({items, addItem}) => {
   
   let result = items.map((el, ind)=> <p key={ind}>{el}</p>)
 
